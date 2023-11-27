@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.playerContainer {
+  position: relative;
+  left: -200px;
+  width: 800px; 
+  overflow: hidden;
+}
+
+.videoPlayer {
+  width: 100%;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.timelineContainer {
+  width: 105%;
+  position: absolute;
+  bottom: 60px; 
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+.timeline {
+  width: 100%;
+  height: 5px;
+  background-color: #666;
+  appearance: none;
+  outline: none;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  cursor: pointer;
+  
+}
+
+.timeline::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: rgb(201, 20, 20);
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controlsContainer {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 11%, rgba(255,255,255,0) 100%);
+  /* padding: 16px; */
+  display: flex;
+  justify-content: space-between;
+  
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* .playerContainer:hover .controlsContainer {
+  opacity: 1;
+}
+.playerContainer:hover .timeline {
+  opacity: 1;
+} */
+
+.controls {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+
+
+.volumeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.volume {
+  width: 80px; 
+  height: 4px; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 10px; 
+ 
+  outline: none;
+  appearance: none;
+  border-radius: 5px;
+}
+
+.volume::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: rgb(189, 189, 189);
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volumeContainer:hover .volume {
+  opacity: 1;
+}
+
+.speedSelect {
+  padding: 8px;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+  background-color: #444; 
+  border: none;
+  
+}
+
+.speedSelect option {
+  background-color: #444;
+  color: white;
+}
+
+.thumbs{
+  border-radius: 5px;
+}
